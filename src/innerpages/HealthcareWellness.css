@@ -1,0 +1,50 @@
+@keyframes shootingStar {
+  from {
+    transform: translateY(-100vh);
+  }
+  to {
+    transform: translateY(100vh);
+  }
+}
+
+.shooting-stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 25;
+}
+
+.shooting-star {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  animation: shootingStar linear infinite;
+}
+
+.shooting-star::before {
+    content: '★';
+    font-size: 16px; 
+    color: #fff;
+  }
+
+.shooting-star:nth-child(1) {
+  left: 10%;
+  top: 20%;
+  animation-duration: 5s;
+}
+
+.shooting-star:nth-child(2) {
+  left: 20%;
+  top: 70%;
+  animation-duration: 6s;
+}
+
+.shooting-star:nth-child(3) {
+  left: 30%;
+  top: 40%;
+  animation-duration: 7s;
+}
+
